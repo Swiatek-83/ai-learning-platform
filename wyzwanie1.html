@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyzwanie 1 - Wprowadzenie do Pythona</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Wyzwanie 1: Wprowadzenie do Pythona</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="wyzwania.html">Wyzwania</a></li>
+                <li><a href="wyzwanie1.html">Wyzwanie 1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Opis Wyzwania</h2>
+            <p>W tym wyzwaniu nauczysz się podstaw Pythona. Twoim zadaniem jest napisać program, który wyświetli "Hello, World!" oraz wykonuje proste operacje matematyczne.</p>
+        </section>
+
+        <section>
+            <h2>Wymagane Umiejętności</h2>
+            <ul>
+                <li>Podstawowe zrozumienie składni Pythona</li>
+                <li>Umiejętność korzystania z edytora kodu</li>
+                <li>Wiedza na temat zmiennych i typów danych</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Twój Edytor Kodowania</h2>
+            <textarea id="code" rows="10" cols="50" placeholder="Wpisz swój kod tutaj..."></textarea>
+            <button id="runCode" class="btn">Uruchom Kod</button>
+            <pre id="output"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 AI Learning Platform</p>
+    </footer>
+    
+    <script>
+        // Funkcja do symulacji print w Pythonie
+        function printToOutput(value) {
+            document.getElementById('output').textContent += value + '\n'; // Dodaj nową linię
+        }
+
+        document.getElementById('runCode').addEventListener('click', function() {
+            const code = document.getElementById('code').value;
+
+            // Zamiana print() na printToOutput()
+            const jsCode = code
+                .replace(/print\((.*)\)/g, 'printToOutput($1)') // Zamiana print() na printToOutput()
+                .replace(/(["'])(.*?)\1/g, (match) => match); // Wymiana stringów, aby były poprawnie interpretowane
+
+            try {
+                // Uruchom zmodyfikowany kod JavaScript
+                eval(jsCode); // Uwaga: eval może być niebezpieczne
+            } catch (error) {
+                // Wyświetl błąd w pre
+                document.getElementById('output').textContent = error;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -177,3 +177,29 @@ button {
 button:hover {
     background: #0056b3; /* Zmiana koloru na hover */
 }
+/* Dodaj do styles2.css */
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+pre {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+.challenge-item a {
+    color: #007BFF; /* Kolor tekstu linku */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    transition: color 0.3s; /* Płynna zmiana koloru */
+}
+
+.challenge-item a:hover {
+    text-decoration: underline; /* Podkreślenie podczas najechania */
+    color: #b74d1c; /* Ciemniejszy kolor podczas najechania */
+}
