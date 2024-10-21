@@ -1,9 +1,19 @@
-// Funkcjonalność karuzeli
-const carouselImages = document.querySelector('.carousel-images');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    // Przykładowa funkcja do obsługi kliknięcia przycisku
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Wyzwanie rozpoczęte!');
+        });
+    });
 
-const updateCarousel = () => {
-    const totalImages = carouselImages.children.length;
-   
+    // Walidacja formularza
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Formularz wysłany!');
+            // Można tu dodać kod do wysyłki formularza
+        });
+    }
+});
