@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Learning Platform</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link do pliku CSS -->
-    <script src="script.js" defer></script> <!-- Link do pliku JavaScript -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,32 +16,73 @@
                 <li><a href="#challenges">Wyzwania</a></li>
                 <li><a href="#community">Społeczność</a></li>
                 <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#gallery">Galeria</a></li>
             </ul>
         </nav>
     </header>
 
+    <section class="hero">
+        <h2>Rozwijaj swoje umiejętności w AI i programowaniu</h2>
+        <p>Interaktywne wyzwania, które uczą i inspirują.</p>
+        <a href="#challenges" class="btn">Rozpocznij wyzwania</a>
+    </section>
+
     <main>
-        <section id="about">
+        <section id="about" class="animated fadeIn">
             <h2>O platformie</h2>
             <p>Nasza platforma oferuje interaktywne wyzwania programistyczne, które uczą AI, machine learningu i programowania. Użytkownicy mogą rozwiązywać problemy krok po kroku, testując swoje modele AI w czasie rzeczywistym.</p>
+            <h3>Dlaczego warto?</h3>
+            <ul>
+                <li>Dostęp do materiałów edukacyjnych</li>
+                <li>Interaktywne wyzwania</li>
+                <li>Wsparcie społeczności</li>
+            </ul>
         </section>
 
-        <section id="challenges">
+        <section id="challenges" class="animated fadeIn">
             <h2>Wyzwania</h2>
             <p>Sprawdź nasze interaktywne wyzwania, które pomogą Ci nauczyć się programowania i AI!</p>
-            <!-- Tutaj można dodać więcej treści dotyczących wyzwań -->
+            <a href="#!" class="btn">Rozpocznij wyzwania</a>
         </section>
 
-        <section id="community">
+        <section id="community" class="animated fadeIn">
             <h2>Społeczność</h2>
             <p>Dołącz do naszej społeczności, aby dzielić się wiedzą, doświadczeniami i zdobywać punkty za ukończenie wyzwań.</p>
-            <!-- Tutaj można dodać więcej informacji o społeczności -->
+            <h3>Najaktywniejsi użytkownicy</h3>
+            <ol>
+                <li>Jan Kowalski</li>
+                <li>Maria Nowak</li>
+                <li>Adam Wiśniewski</li>
+            </ol>
         </section>
 
-        <section id="contact">
+        <section id="gallery" class="animated fadeIn">
+            <h2>Galeria</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="https://via.placeholder.com/400x200" alt="Obraz 1">
+                    <img src="https://via.placeholder.com/400x200/ff7f7f" alt="Obraz 2">
+                    <img src="https://via.placeholder.com/400x200/7f7fff" alt="Obraz 3">
+                </div>
+                <button class="carousel-btn prev">❮</button>
+                <button class="carousel-btn next">❯</button>
+            </div>
+        </section>
+
+        <section id="contact" class="animated fadeIn">
             <h2>Kontakt</h2>
-            <p>Skontaktuj się z nami, aby dowiedzieć się więcej o platformie.</p>
-            <!-- Tutaj można dodać formularz kontaktowy -->
+            <form id="contact-form">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="btn">Wyślij</button>
+            </form>
         </section>
     </main>
 
