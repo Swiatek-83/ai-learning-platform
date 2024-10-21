@@ -1,3 +1,5 @@
+/* challenges.css */
+
 * {
     box-sizing: border-box;
 }
@@ -7,11 +9,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #f4f4f4; /* Utrzymanie tła z głównej strony */
 }
 
 header {
-    background: #333;
+    background: #333; /* Utrzymanie koloru nagłówka */
     color: #fff;
     padding: 13px 0;
     text-align: center;
@@ -41,10 +43,10 @@ nav ul li a:hover {
 }
 
 .hero {
-    background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover; /* Tło z obrazem */
+    background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 .hero h2 {
@@ -58,7 +60,7 @@ nav ul li a:hover {
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background: #007BFF;
+    background: #007BFF; /* Utrzymanie koloru przycisku */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -66,7 +68,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #0056b3; /* Utrzymanie koloru hover */
     transform: scale(1.05);
 }
 
@@ -90,17 +92,17 @@ section:hover {
 }
 
 h2 {
-    color: #333;
+    color: #333; /* Utrzymanie koloru nagłówków */
 }
 
 h3 {
-    color: #555;
+    color: #555; /* Utrzymanie koloru nagłówków sekcji */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333;
+    background: #333; /* Utrzymanie koloru stopki */
     color: #fff;
 }
 
@@ -122,41 +124,27 @@ footer {
     }
 }
 
-/* Karuzela */
-.carousel {
-    position: relative;
-    overflow: hidden;
+/* Sekcje z wyzwaniami */
+.challenge-category {
+    margin-bottom: 40px;
 }
 
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.challenge-category h3 {
+    color: #333; /* Utrzymanie koloru nagłówków kategorii */
 }
 
-.carousel-images img {
-    width: 400px;
-    height: 200px;
+.challenge-item {
+    padding: 15px;
+    background: #e9ecef; /* Jasny kolor dla wyzwań */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background 0.3s;
 }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.challenge-item:hover {
+    background: #dee2e6; /* Zmieniony kolor na hover dla wyzwania */
 }
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
-/* Formularz */
+/* Styl formularza */
 form {
     display: flex;
     flex-direction: column;
@@ -174,5 +162,18 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: #007BFF;
+    border-color: #007BFF; /* Utrzymanie koloru focus */
+}
+
+button {
+    padding: 10px;
+    background: #007BFF; /* Utrzymanie koloru przycisku */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3; /* Zmiana koloru na hover */
 }
